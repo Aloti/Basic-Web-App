@@ -1,3 +1,7 @@
+body{
+    font-family: 'Lato', sans-serif;
+}
+
 main{
     padding-top:1em;
 }
@@ -16,5 +20,5 @@ main{
 
 .title-default{
     font-family: 'Lato', sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
 }

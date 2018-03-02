@@ -1,7 +1,7 @@
 extends layout
 
 block content
-    h1 #{title}
+    h1.title-default #{title}
     form(method='POST', action='/pages/edit/'+page.id)
         #form-group
             label Title:
