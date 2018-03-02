@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    h1= page.title
+    h5 Written by #{author}
+    p= page.body
+    hr
+    if user
+        if user.id == page.author
+        a.btn.btn-light(href='/pages/edit/'+page._id) Edit
+        a.btn.btn-danger.delete-page(href='#', data-id=page.id) Delete
