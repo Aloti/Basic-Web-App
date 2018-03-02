@@ -87,16 +87,7 @@ app.get('*', function(req,res,next){
 
 //Home Route
 app.get('/', function(req, res){
-    Page.find({}, function(err, pages){
-        if(err){
-            console.log(err);
-        }else{
-            res.render('index', {
-                title:'Pages',
-                pages: pages
-            });
-        }
-    });
+    res.render('home');
 })
 
 // Route Files
@@ -106,6 +97,9 @@ app.use('/pages', pages);
 let users = require('./routes/users');
 app.use('/users', users);
 
+app.get('*', function(req, res){
+    res.render('fourohfour');
+});
 
 app.listen(3000, function(){
     console.log('Server started on port 3000...');

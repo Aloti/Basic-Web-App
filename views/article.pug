@@ -2,9 +2,11 @@ extends layout
 
 block content
     .main-container-sub.container
-        h1.title-default= page.title
-        h5 Written by #{author}
+        h1.title-default= article.title
+        h5 Written by #{article.authorname}
         p= page.body
+        img(src=article.image, alt='Image', width=100%)
+        a(href=article.link) #{article.linkname}
         hr
         if user
             if user.id == page.author

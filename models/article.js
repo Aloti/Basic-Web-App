@@ -9,12 +9,17 @@ let articleSchema = mongoose.Schema({
         type:String,
         required: true
     },
+    authorname:{
+        type:String,
+        required: true
+    },
     body:{
         type:String,
         required: true
     },
-    images:[String],
-    links:[String]
+    image:String,
+    link:String,
+    linkname:String
 });
 
 let Page = module.exports = mongoose.model('Page', pageSchema)

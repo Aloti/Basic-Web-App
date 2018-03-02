@@ -53,7 +53,7 @@ router.post('/add', function(req, res){
                 return;
             }else{
                 req.flash('success', 'Page Added');
-                res.redirect('/');
+                res.redirect('/pages');
             }
         });
     }
@@ -110,6 +110,20 @@ router.delete('/:id', function(req, res){
             });
         }
     })
+})
+
+//Home Route
+router.get('/', function(req, res){
+    Page.find({}, function(err, pages){
+        if(err){
+            console.log(err);
+        }else{
+            res.render('index', {
+                title:'Pages',
+                pages: pages
+            });
+        }
+    });
 })
 
 // Access Control

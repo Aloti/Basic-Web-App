@@ -1,8 +1,11 @@
 body{
     font-family: 'Lato', sans-serif;
+    background-color: #fefbd8;
+    /* background-image: url('/wall.jpg'); */
+    background-size: 100%;
 }
 
-main{
+.main-container-sub{
     padding-top:1em;
 }
 
@@ -20,5 +23,13 @@ main{
 
 .title-default{
     font-family: 'Lato', sans-serif;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
+}
+
+.img-rad{
+    border-radius: 10px;
+}
+
+.home-title{   
+    font-family: 'Press Start 2P', cursive;
 }

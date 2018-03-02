@@ -29,7 +29,7 @@ router.post('/register', function(req, res){
     let errors = req.validationErrors();
 
     if(errors){
-        res.render('registe', {
+        res.render('register', {
             errors:errors
         });
     } else {
@@ -70,6 +70,7 @@ router.get('/login', function(req, res){
 
 //Login Process
 router.post('/login', function(req, res, next){
+    req.flash('success', 'Successfully logged in');
     passport.authenticate('local', {
         successRedirect:'/',
         failureRedirect:'/users/login',

@@ -1,16 +1,17 @@
 extends layout
 
 block content
-    h1.title-default #{title}
-    form(method='POST', action='/pages/edit/'+page.id)
-        #form-group
-            label Title:
-            input.form-control(name='title', type='text', value=page.title)
-        #form-group
-            label Author:
-            input.form-control(name='author', type='text', value=page.author)
-        #form-group
-            label Body:
-            textarea.form-control(name='body')= page.body
-        br
-        input.btn.btn-primary(type='submit',value='Submit')
+    .main-container-sub.container
+        h1.title-default #{title}
+        form(method='POST', action='/pages/edit/'+page.id)
+            #form-group
+                label Title:
+                input.form-control(name='title', type='text', value=page.title)
+            #form-group
+                label Author:
+                input.form-control(name='author', type='text', value=page.author)
+            #form-group
+                label Body:
+                textarea.form-control(name='body')= page.body
+            br
+            input.btn.btn-primary(type='submit',value='Submit')

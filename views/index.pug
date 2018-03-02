@@ -1,8 +1,9 @@
 extends layout
 
 block content
-    h1.title-default #{title}
-    ul.list-group
-        each page, i in pages
-            li.list-group-item
-                a(href="/pages/"+page._id)= page.title
+    .main-container-sub.container
+        h1.title-default #{title}
+        ul.list-group
+            each page, i in pages
+                li.list-group-item
+                    a(href="/pages/"+page._id)= page.title
